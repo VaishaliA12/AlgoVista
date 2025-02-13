@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="prism.css">
 
     <link rel="shortcut icon" href="../favicon.png?" type="image/x-icon">
-    <title>Searching Visualizer</title>
+    <title>AlgoVista</title>
 </head>
 
 <body>
@@ -20,32 +20,32 @@
         <!-- header containing title, generate new array, array size, speed -->
         <header>
             <h1 id="name"><a href="searching.html"><span class="big">S</span>EARCHING</a><a href="searching.html"><span
-                        class="big">V</span>ISUALIZER<span>🔥</span></a></h1>
+                        class="big">V</span>ISUALIZER</a></h1>
             <div id="basic_btn">
-                <div class="gen">
-                <div class="dropdown">
+                 <div class="gen"> 
+                 <div class="dropdown">
                     <button class="select">
                         <div class="selected">Click any Button</div>
-                        <!-- <div class="icon"></div> -->
+                         <!-- <div class="icon"></div>  -->
                     </button>
-                    <!-- <ul class="menu">
+                   <!--  <ul class="menu">
                         <li>Linear Display</li>
                         <li>Circular Display</li>
                     </ul> -->
-                </div>
+                </div> 
 
                 <div class="generate_new_array">
-                    <button id="generate">Generate New Array</button>
+                    <button id="generate">New Array</button>
                 </div>
-            </div>
+            <!-- </div> -->
                 <div class="sizespeed">
                     <div class="array_range">
-                        <button id="size">Size : <span id="size_value"></span></button>
+                        <button id="size">Size: <span id="size_value"></span></button>
                         <input type="range" id="size_slider" min="4" max="100" value="64">
                     </div>
 
                     <div class="array_speed">
-                        <button id="speed">Speed : <span id="speed_value"></span></button>
+                        <button id="speed">Speed: <span id="speed_value"></span></button>
                         <input type="range" id="speed_slider" min="1" max="5" value="5">
                     </div>
                 </div>
@@ -66,10 +66,9 @@
                     <div class="note">Element Present at: </div>
                     <div class="index"></div>
                 </div>
-                <span class="boundary"></span>
+                <!-- <span class="boundary"></span> -->
                 <div class="stepCount">
-                    <div class="note" id="step
-                    ">Step Count: </div>
+                    <div class="note" id="step">Step Count: </div>
                     <div class="step"></div>
                 </div>
             </div>
@@ -97,18 +96,14 @@
             <div id="description">
                 <div class="code">
                     <div class="selectedPane">
-                        <span>Code in (C++)</span>
+                        <span>Code in C++</span>
                     </div>
-                    <pre id="code_java" style="font-family: 'Poppins', sans-serif;
+                    <pre id="code_java" style="font-family: 'Montserrat', serif;
                     font-size: 15px;
                     letter-spacing: 3px;">
-                        <code class="language-java">// C++ code for linearly searching x in arr[]. If x
-// is present then return its location, otherwise
-// return -1
-
+                         <code class="language-java" style="font-family: 'Montserrat', serif;">//<b>returns index at which target is found else returns -1</b>
 class Solution {
-public:
-   int linear(vector<int> &nums,int target){
+   int linearSearch(int nums[],int target){
     int n=nums.size();
     for(int i = 0; i < n; i++) {
         if (nums[i] == target) return i;
@@ -116,7 +111,7 @@ public:
     return -1;
     }
 };
-                                </code>
+                                </code> 
                             </pre>
                 </div>
 
@@ -125,32 +120,25 @@ public:
                         <div class="selectedPane">
                             <span>Time Complexity</span>
                         </div>
-                        <pre id="time" style="font-family: 'Poppins', sans-serif;
+                        <pre id="time" style="font-family: 'Montserrat', serif;
                         font-size: 15px;
                         letter-spacing: 3px;">
-                            <code class="language-java">> Best- case complexity = O (1) occurs when the search element is present at the first
-element in the search array.
-> Worst- case complexity = O (n) occurs when the search element is not present in the
-set of elements or array.
-> Average complexity = O (n) is referred to when the element is present somewhere
-in the search array
-
-Time Complexity: O(N)
-                            </code>
+                             <code class="language-java" style="font-family: 'Montserrat', serif;">1.<b>Best-case:</b> O(1) 
+2.<b>Worst-case:</b> O(n) 
+3.<b>Average-case:</b> O(n) 
+                            </code> 
                         </pre>
                     </div>
                     <div class="spaceComplexity">
                         <div class="selectedPane">
                             <span>Space Complexity</span>
                         </div>
-                        <pre id="space" style="font-family: 'Poppins', sans-serif;
+                        <pre id="space" style="font-family: 'Montserrat', serif;
                         font-size: 15px;
                         letter-spacing: 3px;">
-                            <code class="language-java">> As the amount of extra data
-                            in Linear Search is fixed, the Space Complexity is O(1).
-
-                            Space Complexity: O(1).
-                            </code>
+                             <code class="language-java" style="font-family: 'Montserrat', serif;">
+                            <b>Space Complexity:</b> O(1).
+                            </code> 
                         </pre>
                     </div>
                 </div>

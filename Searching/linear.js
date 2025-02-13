@@ -57,11 +57,11 @@ linear.addEventListener('click', async () => {
         const index = document.querySelector('.index')
         if (ind != -1) {
             searchText.innerHTML=`Searching Complete`
-            index.innerHTML = `${val} is present at index no. ${ind}`
+            index.innerHTML = `<pre style="font-family: 'Montserrat', serif">${val} is present at index no. ${ind}</pre>`
         }
         else {
             searchText.innerHTML=`Not Found!!`
-            index.innerHTML = `${val} is not present in the Array!!`
+            index.innerHTML = `<pre style="font-family: 'Montserrat', serif">${val} is not present in the Array!!</pre>`
             findingAudio.pause()
         }
         // enableSortingBtn();
@@ -69,7 +69,7 @@ linear.addEventListener('click', async () => {
         enableNewArrayBtn();
     }
     else {
-        alert('Pleae put Searching Value first!!😕😕')
+        alert('Please put Searching Value first!!')
     }
 
 })

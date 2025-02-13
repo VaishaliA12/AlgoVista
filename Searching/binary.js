@@ -65,68 +65,34 @@ async function descriptionText() {
 
     const code = document.querySelector('#code_java')
     // console.log(code.innerHTML)
-    code.innerHTML = `// Java implementation of recursive Binary Search
-class BinarySearch {
-    // Returns index of x if it is present in arr[l..
-    // r], else return -1
-    int binarySearch(int arr[], int l, int r, int x)
+    code.innerHTML = `<pre style="font-family: 'Montserrat', serif"><b>//returns index at which target is found else returns -1</b>
+class Solution {
+    int binarySearch(int nums[],int target)
     {
-        if (r >= l) {
-            int mid = l + (r - l) / 2;
-
-            // If the element is present at the
-            // middle itself
-            if (arr[mid] == x)
-                return mid;
-
-            // If element is smaller than mid, then
-            // it can only be present in left subarray
-            if (arr[mid] > x)
-                return binarySearch(arr, l, mid - 1, x);
-
-            // Else the element can only be present
-            // in right subarray
-            return binarySearch(arr, mid + 1, r, x);
+        int n=nums.size();
+        int left=0,right=n-1;
+        while(left<=right){
+          int mid=(left+right)/2;
+          if(nums[mid]==target) return mid;
+          else if(nums[mid]>target) right=mid-1;
+          else left=mid+1;
         }
-
-        // We reach here when element is not present
-        // in array
         return -1;
     }
-
-    // Driver method to test above
-    public static void main(String args[])
-    {
-        BinarySearch ob = new BinarySearch();
-        int arr[] = { 2, 3, 4, 10, 40 };
-        int n = arr.length;
-        int x = 10;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
-        if (result == -1)
-            System.out.println("Element not present");
-        else
-            System.out.println("Element found at index "
-                            + result);
-    }
-}
-`
+};
+</pre>`;
     const time = document.querySelector('#time')
-    time.innerHTML = `
-> Best-case complexity = The best-case time complexity  would be O(1)
-when the central index would directly match the desired value.
-> Worst-case complexity = O(log n) in the worst case. 
-> Average complexity = The average case time complexity 
-of the binary search algorithm is O(log n)
-`
+    time.innerHTML = `<pre style="font-family: 'Montserrat', serif">
+1.<b>Best-case</b>: O(1)
+2.<b>Worst-case</b>: O(log n) 
+3.<b>Average-case</b>: O(log n).
+</pre>`
 
     const space = document.querySelector('#space')
-    space.innerHTML = `Binary Search will be an O(log n) space complex
-in a recursive implementation.
-Binary Search will be executed iteratively so that the 
-space complexity is O(1).
-Two variables are required to keep track of the number 
-of elements that need to be checked... 
-Additional data is not necessary.`
+    space.innerHTML = `<pre style="font-family: 'Montserrat', serif">
+1.<b>Recursively</b>: O(log n)
+2.<b>Iteratively</b>: O(1)
+</pre>`
 
 
 }
@@ -160,16 +126,16 @@ const binary = document.querySelector('#binary_Search').addEventListener('click'
         const index = document.querySelector('.index')
         if (ind != -1) {
             searchText.innerHTML=`Searching Complete`
-            index.innerHTML = `${val} is present at index no. ${ind} `
+            index.innerHTML = `<pre style="font-family: 'Montserrat', serif">${val} is present at index no. ${ind}</pre> `
         }
         else {
             searchText.innerHTML=`Not Found!!`
-            index.innerHTML = `${val} is not present in the array!!`
+            index.innerHTML = `<pre style="font-family: 'Montserrat', serif">${val} is not present in the array!!</pre>`
         }
 
     }
     else {
-        alert('Pleae put Searching Value first!!😕😕')
+        alert('Please put Searching Value first!!')
     }
     // enableSortingBtn();
     // enableSizeSlider();
