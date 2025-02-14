@@ -44,10 +44,10 @@ async function BubbleSort() {
             // element[j + 1].style.background = 'cyan';
 
         }
-        element[element.length - 1 - i].style.background = 'rgb(0,255,0)';
+        element[element.length - 1 - i].style.background = '#A4B465';
         
     }
-    element[0].style.background = 'rgb(0,255,0)';
+    element[0].style.background = '#A4B465';
     done.play()
     selectText.innerHTML=`Sorting Complete!`
 

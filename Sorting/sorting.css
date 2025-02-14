@@ -72,12 +72,12 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 0px 35px;
-    gap: 10px;
+    gap: 15px;
 
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 9px;
     font-family: 'Unbounded', cursive;
     cursor: pointer;
@@ -106,18 +106,20 @@ h1 a {
 }
 
 .big {
-    font-size: 27px;
+    font-size: 26px;
     transition: all 0.5s ease-in-out;
 }
 
 
 h1:hover {
-    font-size: 24px;
+    font-size: 21px;
     text-shadow: -2px 3px 6px rgba(181, 199, 240, 0.4);
     background-color: #5863dc2b;
     border-radius: 20px;
     flex-wrap: nowrap;
-    width: 20vw;
+    width: 24vw;
+    height: 12.7vh;
+    /* width: 20vw; */
     /* box-shadow: 0px 0px 60px -20px rgba(255,255,255,0.87); */
     box-shadow: -1px -1px 118px -47px rgba(181, 199, 240, 1);
 }
@@ -172,7 +174,7 @@ h1:hover {
     text-decoration: none;
     font-size: 14px;
     border: 2px solid white;
-    font-family: 'Unbounded', cursive;
+    font-family: "Montserrat", serif;
     transition: all 0.4s ease-in-out;
     letter-spacing: 2px;
 }
@@ -201,11 +203,11 @@ h1:hover {
 
 
 .select {
-    background-color: transparent;
+    background-color: #3a43ae2b;
     /* padding: 10px; */
     border-radius: 7px;
     border: 2px solid white;
-    font-family: 'Unbounded', cursive;
+    font-family: "Montserrat", serif;
     cursor:text;
     width: 16.4vw;
     height: 5.6vh;
@@ -213,11 +215,11 @@ h1:hover {
     justify-content: space-around;
     align-items: center;
     transition: all 0.5s ease-in-out;
-    outline: none;
+    /* outline: none; */
 }
 .selected{
     color: white;
-    font-family:'Unbounded', cursive;
+    font-family:"Montserrat", serif;
     letter-spacing: 2px;
     font-size: 14px;
 }
@@ -240,7 +242,7 @@ h1:hover {
     color: #151f32; */
     font-size: 14px;
     box-shadow: -1px 7px 50px 0px rgba(255, 255, 255, 0.87);
-    width: 17vw;
+    width: 16.8vw;
 }
 
 .menu {
@@ -315,7 +317,7 @@ h1:hover {
     background-color: #5863dc2b;
     color: white;
     border: 2px solid white;
-    font-family: 'Unbounded', cursive;
+    font-family: "Montserrat", seri;
     font-size: 14px;
     letter-spacing: 2px;
     transition: all 0.4s ease-in-out;
@@ -336,18 +338,19 @@ h1:hover {
 
 #speed {
     cursor: pointer;
-    width: 15.9vw;
+    width: 19.9vw;
     height: 5.6vh;
     border-radius: 7px;
     border: none;
     background-color: #5863dc2b;
     color: white;
     border: 2px solid white;
-    font-family: 'Unbounded', cursive;
+    font-family: "Montserrat", serif;
     font-size: 14px;
     letter-spacing: 2px;
     transition: all 0.4s ease-in-out;
-    margin-right: 5px;
+    margin-right: 6px;
+    margin-left: 6px;
     /* padding: 1px; */
 }
 
@@ -365,7 +368,7 @@ h1:hover {
 /* Slider css */
 input[type=range] {
     height: 15px;
-    -webkit-appearance: none;
+    appearance: none;
     background: transparent;
     margin: 10px 0;
     width: 100%;
@@ -379,7 +382,7 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
     cursor: pointer;
-    animate: 0.2s;
+    animation: 0.2s;
     box-shadow: 1px 1px 1px #50555C;
     background: #7c8592;
     border-radius: 14px;
@@ -418,14 +421,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     flex-direction: column;
     margin: 20px auto;
     border-radius: 7px;
-    background-color: #090e32a9;
+    background-color: #5863dc34;
     /* box-shadow: 1px -24px 100px 6px rgba(88, 99, 220,0.5); */
     box-shadow: 15px 36px 100px 50px rgba(88, 99, 220, 0.5);
     transition: all 0.5s ease-in-out;
 }
 
 #working_area:hover {
-    background-color: #090d3595;
+    background-color: #2d337532;
     width: 96.9vw;
     height: 78.8vh;
 }
@@ -439,6 +442,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     justify-content: center;
     align-items: first baseline;
     margin-top: 3vh;
+    margin-bottom: 6vh;
 }
 
 .bar {
@@ -446,12 +450,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     color: #162b52;
     /* height: 43px; */
     width: 4vw;
-    background-color: cyan;
+    background-color:#C9EEFF;
     transition: all .5s ease-in-out;
     font-size: 1px;
     text-align: center;
     border-radius: 0px 0px 8px 8px;
-    margin: 0 1px;
+    margin: 0 3px;
 }
 
 .bar:hover {
@@ -501,7 +505,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     border: none;
     text-decoration: none;
     font-size: 15px;
-    font-family: 'Unbounded', cursive;
+    font-family: "Montserrat", serif;
     letter-spacing: 3px;
     color: white;
     background-color: #3a43ae2b;
@@ -543,7 +547,7 @@ ion-icon{
 .result{
     background-color: rgba(4, 20, 53, 0.146);
     height: 12vh;
-    width: 67vw;
+    width: 65vw;
     margin: 15px auto;
     border-radius: 25px;
     display: flex;
@@ -673,13 +677,13 @@ ion-icon{
     height: 100.8%;
 }
 #time{
-    width: 36vw;
-    height: 32vh;
+    width: 30vw;
+    height: 25vh;
 }
 
 #space{
-    width: 36vw;
-    height: 32vh;
+    width: 30vw;
+    height: 25vh;
 }
 
 @media (max-width: 1000px) {

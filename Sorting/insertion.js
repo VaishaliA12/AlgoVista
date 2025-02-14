@@ -36,66 +36,33 @@ async function descriptionText_insertion() {
 
     const code = document.querySelector('#code_java')
     // console.log(code.innerHTML)
-    code.innerHTML = `// Java program for implementation of Insertion Sort
-public class InsertionSort {
-/*Function to sort array using insertion sort*/
-void sort(int arr[])
-{
-    int n = arr.length;
-    for (int i = 1; i < n; ++i) {
-        int key = arr[i];
-        int j = i - 1;
+    code.innerHTML = `<pre style="font-family: 'Montserrat', serif"><b>//C++ code for implementation of Insertion Sort</b>
 
-        /* Move elements of arr[0..i-1], that are
-        greater than key, to one position ahead
-        of their current position */
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+class InsertionSort {
+    void sort(int arr[])
+{
+    int n=arr.size();
+    for(int i=1;i<n;++i){
+        int key=arr[i];
+        int j=i-1;
+        while(j>=0 && arr[j]>key){
+            arr[j+1]=arr[j];
+            j=j-1;
         }
-        arr[j + 1] = key;
+        arr[j + 1]=key;
     }
 }
-
-/* A utility function to print array of size n*/
-static void printArray(int arr[])
-{
-    int n = arr.length;
-    for (int i = 0; i < n; ++i)
-        System.out.print(arr[i] + " ");
-
-    System.out.println();
-}
-
-// Driver method
-public static void main(String args[])
-{
-    int arr[] = { 12, 11, 13, 5, 6 };
-
-    InsertionSort ob = new InsertionSort();
-    ob.sort(arr);
-
-    printArray(arr);
-}
 };
-
-
-
-
-`
+</pre>`
     const time = document.querySelector('#time')
-    time.innerHTML = `The worst-case (and average-case) complexity of the insertion sort algorithm is O(n²). Meaning that, in the worst case, the time taken to sort a list is proportional to the square of the number of elements in the list. 
-The best-case time complexity of insertion sort algorithm is O(n) time complexity.
-
-Time Complexity: O(N^2)
-`
+    time.innerHTML = `<pre style="font-family: 'Montserrat', serif">
+<b>Time Complexity</b>: O(N^2)
+</pre>`
 
     const space = document.querySelector('#space')
-    space.innerHTML = `The space complexity of insertion sort is <b>O (1)</b>.
-It is because, in insertion sort, an extra variable is required for swapping.
-
-Auxiliary Space: O(1)
-    `
+    space.innerHTML = `<pre style="font-family: 'Montserrat', serif">
+<b>Auxiliary Space</b>: O(1)
+    </pre>`
 
 
 }
@@ -111,19 +78,19 @@ async function InsertionSort() {
         await waitforme(delay);
 
         while (j >= 0 && (parseInt(element[j].style.height) > parseInt(p))) {
-            element[j].style.background = 'rgb(9, 102, 2)';
+            element[j].style.background = 'rgb(245, 212, 24)';
             element[j + 1].style.height = element[j].style.height;
             j--;
             beep.play();
             await waitforme(delay);
 
             for (let k = i; k >= 0; k--) {
-                element[k].style.background = 'rgb(3, 252, 11)';
+                element[k].style.background = '#A4B465';
 
             }
         }
         element[j + 1].style.height = p;
-        element[i].style.background = 'rgb(3, 252, 11)';
+        element[i].style.background = '#A4B465';
     }
     selectText.innerHTML=`Sorting Complete!`
     done.play();

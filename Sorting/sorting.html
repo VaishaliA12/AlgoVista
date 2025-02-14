@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="sorting.css">
     <link rel="stylesheet" href="prism.css">
     <link rel="shortcut icon" href="../favicon.png?" type="image/x-icon">
-    <title>Sorting Visualizer</title>
+    <title>AlgoVista</title>
 </head>
 
 <body>
@@ -34,18 +34,18 @@
                     </div>
 
                     <div class="generate_new_array">
-                        <button id="generate">Generate New Array</button>
+                        <button id="generate">New Array</button>
                     </div>
                 </div>
                 <div class="sizespeed">
                     <div class="array_range">
-                        <button id="size">Size : <span id="size_value"></span></button>
+                        <button id="size">Size: <span id="size_value"></span></button>
                         <input type="range" id="size_slider" min="4" max="100" value="64">
                     </div>
 
                     <div class="array_speed">
-                        <button id="speed">Speed : <span id="speed_value"></span></button>
-                        <input type="range" id="speed_slider" min="1" max="5" value="5">
+                        <button id="speed">Speed: <span id="speed_value"></span></button>
+                        <input type="range" id="speed_slider" min="5" max="15" value="10">
                     </div>
                 </div>
             </div>
@@ -95,49 +95,27 @@
             <div id="description">
                 <div class="code">
                     <div class="selectedPane">
-                        <span>Code in (Java)</span>
+                        <span>Code in C++</span>
                     </div>
-                    <pre id="code_java" style="font-family: 'Poppins', sans-serif;
+                    <pre id="code_java" style="font-family: 'Montserrat', serif;
                     font-size: 15px;
                     letter-spacing: 3px;">
-<code class="language-java">// Java program for implementation of Bubble Sort
-import java.util.*;
-
+<code class="language-java" style="font-family: 'Montserrat', serif;"></b>//C++ code for implementation of Bubble Sort</b>
 class BubbleSort {
     void bubbleSort(int arr[])
     {
-        int n = arr.length;
-        for (int i = 0; i < n - 1; i++)
-            for (int j = 0; j < n - i - 1; j++)
-                if (arr[j] > arr[j + 1]) {
-                    // swap arr[j+1] and arr[j]
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+        int n = arr.size();
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j< (n-i-1);j++){
+                if(arr[j] > arr[j + 1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
                 }
+            }
+        }
     }
-
-    /* Prints the array */
-    void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-
-    // Driver method to test above
-    public static void main(String args[])
-    {
-        BubbleSort ob = new BubbleSort();
-        int arr[] = { 5, 1, 4, 2, 8 };
-        ob.bubbleSort(arr);
-        System.out.println("Sorted array");
-        ob.printArray(arr);
-    }
-} 
-
-                            
+};   
                                 </code>
                             </pre>
                 </div>
@@ -147,13 +125,11 @@ class BubbleSort {
                         <div class="selectedPane">
                             <span>Time Complexity</span>
                         </div>
-                        <pre id="time" style="font-family: 'Poppins', sans-serif;
+                        <pre id="time" style="font-family: 'Montserrat', serif;
                         font-size: 15px;
                         letter-spacing: 3px;">
-                        <code class="language-java">The above function always runs O(N2) time even if the array is sorted. 
-It can be optimized by stopping the algorithm if the inner loop didn’t cause any swap.
-
-Time Complexity: O(N2)
+                        <code class="language-java" style="font-family: 'Montserrat', serif;">
+<b>Time Complexity:</b> O(N^2)
                             </code>
                         </pre>
                     </div>
@@ -161,13 +137,11 @@ Time Complexity: O(N2)
                         <div class="selectedPane">
                             <span>Space Complexity</span>
                         </div>
-                        <pre id="space" style="font-family: 'Poppins', sans-serif;
+                        <pre id="space" style="font-family: 'Montserrat', serif;
                         font-size: 15px;
                         letter-spacing: 3px;">
-                            <code class="language-java">The Space Complexity of the Bubble Sort Algorithm Bubble sort requires only a fixed amount of extra space for the flag, i, and size variables. 
-As a result, the space complexity of bubble sort is O. (1).
-
-Auxiliary Space: O(1)
+                            <code class="language-java" style="font-family: 'Montserrat', serif;">
+<b>Auxiliary Space:</b> O(1)
                             </code>
                         </pre>
                     </div>
