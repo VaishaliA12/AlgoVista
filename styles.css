@@ -4,10 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", serif;
     overflow: hidden;
 }
 
+h1{
+    font-family: "Montserrat", serif;
+}
 :root {
     --black: #000;
     --white: #fff;
@@ -118,7 +121,8 @@ header .logo {
     top: 0;
     z-index: 3;
     font-size: 6.8rem;
-    color: cyan;
+    color: #C9EEFF;
+    font-family: "Montserrat", serif;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -126,7 +130,8 @@ header .logo {
     position: relative;
     z-index: 3;
     font-size: 8.5rem;
-    color: cyan;
+    font-family: "Montserrat", serif;
+    color: #C9EEFF;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -181,23 +186,8 @@ header .logo {
 
 
  .wrapper {
-    display: inline-flex;
+    display: flex;
 }  
-
-
-.wrapper .dynamic-txts {
-    margin-top: 2px;
-    margin-left: 15px;
-    height: 25px;
-    overflow: hidden;
-}
-
-.dynamic-txts li {
-    list-style: none;
-    position: relative;
-    top: 0px;
-    animation: slide 13s steps(5) infinite;
-}
 
 @keyframes slide {
     100% {
@@ -205,20 +195,6 @@ header .logo {
     }
 }
 
-.dynamic-txts li span {
-    position: relative;
-}
-
-.dynamic-txts li span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid var(--black);
-    background: var(--white);
-    animation: typing 1.5s steps(7) infinite;
-}
 
 @keyframes typing {
     100% {
